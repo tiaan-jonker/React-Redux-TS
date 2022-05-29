@@ -1,10 +1,16 @@
 import React from 'react'
+import { Provider } from 'react-redux'
+import { store } from '../redux/'
+import RepositoriesList from './RepositoriesList'
 
-function App() {
+const App = () => {
   return (
-    <div className='App'>
-      <p>Hello world</p>
-    </div>
+    <Provider store={store}>
+      <div className='App'>
+        <p>Hello world</p>
+        <RepositoriesList />
+      </div>
+    </Provider>
   )
 }
 
